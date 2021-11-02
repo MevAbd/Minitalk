@@ -84,9 +84,10 @@ char	*displayPid()
 
 int	main(void)
 {
-	char	*pid;
+	int	pid;
 
-	pid = displayPid();
+	pid = getpid();
+	ft_putnbr(pid);
 	signal(SIGUSR1, handle_sigusr1);
 	signal(SIGUSR2, handle_sigusr2);
 	while (1)
