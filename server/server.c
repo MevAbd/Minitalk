@@ -15,17 +15,13 @@ void	ft_add(int n)
 	c |= (n << i++);
 	if (i > 7)
 	{
-	//	buff[pos] = c;
-	//	pos++;
-	//	if (pos == SIZE || c == '\0')
-	//	{
-	//		ft_print_buff();
-	//		pos = 0;
-	//	}
-		if (c == '\0')
-			write(1, "\n", 1);
-		else 
-			write(1, &c, 1);
+		buff[pos] = c;
+		pos++;
+		if (pos == SIZE || c == '\0')
+		{
+			ft_print_buff();
+			pos = 0;
+		}
 		i = 0;
 		c = 0;
 	}

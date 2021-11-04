@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <stdio.h>
-#define TTS 500
+#define TTS 650
 
 void	ft_error(void)
 {
