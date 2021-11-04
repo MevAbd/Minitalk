@@ -6,13 +6,13 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:33:58 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/04 23:43:07 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/04 23:51:05 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERVER_H
 # define SERVER_H
-# define SIZE 50000
+# define SIZE 10000
 
 # include <unistd.h>
 # include <signal.h>

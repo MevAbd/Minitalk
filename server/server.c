@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:28:39 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/04 23:43:39 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/04 23:56:06 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,15 @@ void	ft_add(int n)
 	}
 }
 
-void	ft_sig1(void)
+void	ft_sig1(int n)
 {
+	(void)n;
 	ft_add(1);
 }
 
-void	ft_sig2(void)
+void	ft_sig2(int n)
 {
+	(void)n;
 	ft_add(0);
 }
 
