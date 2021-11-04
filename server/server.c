@@ -6,30 +6,31 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 23:28:39 by malbrand          #+#    #+#             */
-/*   Updated: 2021/11/04 23:33:28 by malbrand         ###   ########.fr       */
+/*   Updated: 2021/11/04 23:43:39 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
 
-void	ft_print_buff(void)
+void	ft_print_buff(int pos)
 {
-	write(1, buff, pos);
+	write(1, g_buff, pos);
 }
 
 void	ft_add(int n)
 {
 	static unsigned char	c;
 	static int				i;
+	static int				pos;
 
 	c |= (n << i++);
 	if (i > 7)
 	{
-		buff[pos] = c;
+		g_buff[pos] = c;
 		pos++;
 		if (pos == SIZE || c == '\0')
 		{
-			ft_print_buff();
+			ft_print_buff(pos);
 			pos = 0;
 		}
 		i = 0;
