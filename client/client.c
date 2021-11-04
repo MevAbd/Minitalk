@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   client.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/04 23:27:23 by malbrand          #+#    #+#             */
+/*   Updated: 2021/11/04 23:28:17 by malbrand         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <signal.h>
 #include <stdio.h>
@@ -53,7 +65,7 @@ void	ft_binary(char c, int pid)
 	}
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {	
 	int	pid;
 	int	i;
@@ -75,4 +87,4 @@ int main(int ac, char **av)
 		ft_binary(av[2][i], pid);
 	}
 	return (0);
-}    
+}

@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   server.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/04 23:28:39 by malbrand          #+#    #+#             */
+/*   Updated: 2021/11/04 23:33:28 by malbrand         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
-char buff[SIZE];
-int	pos;
 
 void	ft_print_buff(void)
 {
@@ -9,8 +19,8 @@ void	ft_print_buff(void)
 
 void	ft_add(int n)
 {
-	static unsigned char	c = 0;
-	static int		i = 0;
+	static unsigned char	c;
+	static int				i;
 
 	c |= (n << i++);
 	if (i > 7)
@@ -27,12 +37,12 @@ void	ft_add(int n)
 	}
 }
 
-void	ft_sig1()
+void	ft_sig1(void)
 {
 	ft_add(1);
 }
 
-void	ft_sig2()
+void	ft_sig2(void)
 {
 	ft_add(0);
 }
@@ -40,7 +50,7 @@ void	ft_sig2()
 int	main(void)
 {
 	int	pid;
-	int i;
+	int	i;
 
 	i = 0;
 	pid = getpid();

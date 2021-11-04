@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lib.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/04 23:31:08 by malbrand          #+#    #+#             */
+/*   Updated: 2021/11/04 23:32:08 by malbrand         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "server.h"
 
 void	ft_putchar(char c)
@@ -7,11 +19,14 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int n)
 {
-	unsigned int nbr;
+	unsigned int	nbr;
 
 	if (n < 0)
 		write(1, "-", 1);
-	nbr = n < 0 ? -n : n;
+	if (n < 0)
+		nbr = -n;
+	else
+		nbr = n;
 	if (nbr > 9)
 	{
 		ft_putnbr(nbr / 10);
